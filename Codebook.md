@@ -87,5 +87,5 @@ The 79 measures for mean or standard deviation out of the 561 features in the da
 This is a numeric value for the average of each variable ("Measure"") for each activity ("Activity") and each subject "Person"). 
 
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
