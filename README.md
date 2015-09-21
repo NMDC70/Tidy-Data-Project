@@ -17,10 +17,10 @@ Our Analysis uses the data from 3,4 & 5 above to create a new independent Tidy D
 ## OBJECTIVE OF COURSE PROJECT
 The Code for the Course Project reads data from the given text files into Data Frames & performs the following activities
 
-1) Merges the train and test data sets to create one data set.
+1) Merges the train and test data sets to create one data set.   
 2) Extracts only the measurements on the mean and standard deviation for each measurement.     
-3) Uses descriptive activity names to name the activities in the data set
-4) Appropriately labels the data set with descriptive variable names. 
+3) Uses descriptive activity names to name the activities in the data set 
+4) Appropriately labels the data set with descriptive variable names.    
 5) From the data set in step 4, creates, a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ## Reading Data
