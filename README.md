@@ -1,8 +1,5 @@
+#TIDY DATA PROJECT
 
----
-title: "TIDY DATA - Course Project "
-output: html_document
----
 ## BACKGROUND
 
 Human Activity Recognition Using Smartphones Dataset was provided as input to this Course Project. 30 volunteers performed six activities wearing a Samsung Smart phone on their waist. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
