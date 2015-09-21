@@ -9,10 +9,10 @@ Human Activity Recognition Using Smartphones Dataset was provided as input to th
 
 Following Data has been provided for each record:
 
-1) Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-2) Triaxial Angular velocity from the gyroscope. 
-3) A 561-feature vector with time and frequency domain variables. 
-4) Its activity label. 
+1) Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.     
+2) Triaxial Angular velocity from the gyroscope.          
+3) A 561-feature vector with time and frequency domain variables.     
+4) Its activity label.     
 5) An identifier of the subject who carried out the experiment.
 
 Our Analysis uses the data from 3,4 & 5 above to create a new independent Tidy Data set.
