@@ -21,15 +21,16 @@ Merge_train <-cbind(subject_train, y_train, X_train)
 Complete_Set <- bind_rows(Merge_test, Merge_train)
 ## Step 2: Extracts only the measurements on the mean and standard deviation for each measurement.
 ## We can do this on a wide form or long form, I am going for long
-## We may interpret this in two ways without a clear end use being articulated
+## We may interpret this in two ways (without a clear end use being articulated)
 ## 1 Calculate mean & Std of each observation (i.e. the 561 measures in each row)
-## Or 2 extract those observations which contain means & Std. I am working with this interpretation.
+## Or 2 extract those observations which contain means & Std. I am working with this 2nd interpretation.
 ## Essentially because the last step (step 5) anyway requires us to calculate mean across the measures.
 All_data <- tbl_df(Complete_Set)
 names_col<- names(X_test)
 All_Data_Melt <- melt(All_data, id = c("Person", "Activity"), measure.vars = names_col)
 All_Data_Melt <- mutate(All_Data_Melt, variable = extract_numeric(variable))
 Feature_lbls <-read.table("./getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/features.txt")
+## Using "match" for getting the actual Meaure labels into the Measures column
 All_Data_Melt$variable <- Feature_lbls[,2][match(All_Data_Melt$variable, Feature_lbls[,1])]
 Mean_Std <- filter(All_Data_Melt, grepl('mean|std', variable))
 ## Step 3: Uses descriptive activity names to name the activities in the data set
@@ -45,6 +46,6 @@ names(Mean_Std)[names(Mean_Std) == 'variable'] <- 'Measure'
 By_Mean_Std <- group_by(Mean_Std, Person, Activity, Measure)
 Tidy_Set <- summarise(By_Mean_Std, value = mean(value))
 names(Tidy_Set)[names(Tidy_Set) == 'mean(value)'] <- 'Mean'
-write.table(Tidy_Set, file = "Tidy_Set.txt")
+write.table(Tidy_Set, file = "Tidy_Set.txt", row.names = FALSE)
 ## Pls note if u try to run summarize with plyr loaded after dplyr summarize will give single mean 
 ## value across all measures. So important to detach plyr in that case.
