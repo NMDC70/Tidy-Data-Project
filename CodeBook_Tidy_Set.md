@@ -7,7 +7,7 @@ Purpose of this codebook is to provide an understanding of the Data contained in
 
 "Human Activity Recognition Using Smartphones Dataset"
 
-The original README.txt for the dataset along with the files which give info for the 561 features(featues.txt) & 6 activities (activity_labels.txt) of the orignal dataset give background that is useful to understand the new independent data set created in this project. 
+The original README.txt for the dataset, along with the files which give info for the 561 features(featues.txt) & 6 activities (activity_labels.txt) of the orignal dataset, give background that is useful to understand the new independent data set created in this project. 
 
 The data was downloaded to the working directory & unzipped. Url for obtaining the data is "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip". 
 
@@ -69,12 +69,12 @@ Person is the variable which stores the Subjects who carried out the acitivites.
 
 There Six activities that each Subject (Person) carried out:
 
-1) WALKING
-2) WALKING_UPSTAIRS
-3) WALKING_DOWNSTAIRS
-4) SITTING
-5) STANDING
-60 LAYING
+1)  WALKING
+2)  WALKING_UPSTAIRS
+3)  WALKING_DOWNSTAIRS
+4)  SITTING
+5)  STANDING
+6)  LAYING
 
 There are stored as Factor variables
 
@@ -84,7 +84,7 @@ The 79 measures for mean or standard deviation out of the 561 features in the da
 
 ###Variable 4 - "value"
 
-This is a numeric value for the average of each variable ("Measure"") for each activity ("Activity") and each subject "Person"). 
+This is a numeric value for the average calculate for each variable ("Measure"") from each activity ("Activity") carried out by each subject ("Person"). 
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

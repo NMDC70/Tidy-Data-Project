@@ -2,7 +2,7 @@
 
 ## BACKGROUND
 
-Human Activity Recognition Using Smartphones Dataset was provided as input to this Course Project. 30 volunteers performed six activities wearing a Samsung Smart phone on their waist. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+Human Activity Recognition Using Smartphones Dataset was provided as input to this Course Project. 30 volunteers performed six activities wearing a Samsung Smart phone on their waist. The obtained dataset has been randomly partitioned into two sets, where data for 70% of the volunteers was selected for generating the training data and balance 30% taken as test data.
 
 Following Data has been provided for each record:
 
@@ -32,8 +32,8 @@ We are not concerning ourselves with the Inertial Signals. From the Test & Train
 Each of the 180 subjects has done each of the 6 activities multiple times & the each combination of subject & activity generated 561 measures. The activity names & features are decribed in more detail in the code book. The data is split in the ratio of 70:30 between the train & test sets. Taking the test set:
 
 - total 2947 combinations of                                                               
-- Subject (the person who carried out the activty stored in Subject_Test) &                         
-- Activtiy (stored in y_test)                       
+- Subject (the person who carried out the activty stored in Subject_Test)                             
+- Activtiy (stored in y_test) &                   
 - Creating 2947 observations across the 561 features (stored in X_Test) 
 
 For train the number of subject-actiivty combinations are 7352 & the description would be the same as above replacing underscore test with underscore train.
@@ -50,20 +50,20 @@ The output is a dataframe ("Complete_Set") of 10299 obs and 563 variables. 561 v
 
 For each Measurement we need to extract only the Measures for Mean & Standard Deviation.
 
-First using the "melt" fucntion the Data set was converted into a long data set of four variables & 5777739 observations. Melt was called with Person & Acitivyt as the id variables & all measures were pulled into one column with measures.var calling the vector of column names for the measures. Now we have four variables Person, Activity, Measure(still called "variable"" in the column names) & value.
+First using the "melt" function the Data set was converted into a long data set of four variables & 5777739 observations. Melt was called with Person & Acitivyt as the id variables & all measures were pulled into one column with measures.var calling the vector of column names for the measures. Now we have four variables Person, Activity, Measure(still called "variable"" in the column names) & value.
 
-There are two posisble interpretations for this step which were considered. Both are fairly straight forward from this step on.
+There are two possible interpretations for this step which were considered. Both are fairly straightforward from this step on.
 
-Approach 1: Take the mean & standard deviation of each of the "Measures". 
-Approach 2: Take only those "Measures" which are giving mean or standard deviation values.
+- Approach 1: Take the mean & standard deviation of each of the "Measures".                 
+- Approach 2: Take only those "Measures" which are giving mean or standard deviation values.
 
-Here Approach 2 has been taken here. 
+Here Approach 2 has been taken. 
 
 Output of this Step is a dataframe (Mean_Std) which has four variables and 813621 observations with the variable for measurements now containing the 79 measures which capture a mean or a standard deviation value.
 
 ## Labels
 
-The 3rd & 4th requirements for Project course require the Activities to have dscriptive lables & the Colums to be named appropriately. The same is done in the Steps 3 & 4 of the program.
+The 3rd & 4th requirements for Project require the Activities to have dscriptive lables & the Columns to be named appropriately. The same is done in the Steps 3 & 4 of the program.
 
 ## Create an independent Tidy Data Set
 
@@ -71,10 +71,11 @@ From the data set in step 4, creates a second, independent tidy data set with th
 
 There are 180 person activity combinations & we have 79 measures left in the dataframe. Average of each variable for each activty & each subject will lead to 180 * 79 or 14220 Mean values. 
 
-Group the Data Frame for Standard Deviation & Menas obtained above by Person, Activity & Measure and then Summarise.This gives us the end result our Tidy Data set with 4 variables & 14220 observations.
+Group the Data Frame for Standard Deviation & Means obtained above group by Person, Activity & Measure and then Summarise.This gives us the end result - our Tidy Data set with 4 variables & 14220 observations.
+
 The pricipals of Tidy Data are well in place. For this table each variable forms a Column & Each observation forms a row. 
 
-The data is written into a text file "Tidy_Set.txt" which can be written into a data frame with read.table. 
+The data is written into a text file "Tidy_Set.txt" which can be written back into a data frame with read.table. 
 
 
 
